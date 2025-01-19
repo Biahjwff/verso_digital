@@ -11,13 +11,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body style="font-family: 'Happy Monkey' , system-ui;" class="flex flex-col min-h-screen bg-yellow-50">
-    <header class="bg-yellow-50 flex items-center py-4 shadow fixed top-0 w-full z-10">
-        <h1 class="mx-4 text-2xl mx-4 font-bold">Verso Digital</h1>
-        <nav class="ml-auto flex space-x-4 mr-4">
-          <a href="sobre.php" class="text-lg font-medium mx-4 hover:underline">Sobre Nós</a>
-          <a href="principal.php" class="text-lg font-medium hover:underline">Home</a>
-        </nav>
-      </header>
+
+<?php include "cabecalho.php" ?>
 
     <main class="container mx-auto px-6 py-10">
         <!-- Convite para Parcerias -->
@@ -69,18 +64,7 @@
         </section>
     </main>
 
-    <footer class="flex bg-yellow-50 py-4 items-center">
-
-        <div class="mr-auto" ></div>
-      
-        <div class="mx-auto">
-          <p>&copy; 2024 Verso Digital. Todos os direitos reservados.</p>
-        </div>
-      
-        <div class="ml-auto mr-4">
-          <a href="#" class="text-blue-400 hover:underline">?</a>
-        </div>
-        
-        </footer>
+    <?php include "footer.php" ?>
+    
 </body>
 </html>

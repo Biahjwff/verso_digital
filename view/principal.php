@@ -38,13 +38,7 @@ if (!isset($_SESSION['logado'])) {
 <body style="font-family: 'Happy Monkey' , system-ui;" class="flex flex-col min-h-screen bg-yellow-50">
 
   <!-- Cabeçalho fixo -->
-  <header class="bg-yellow-50 flex items-center py-4 shadow fixed top-0 w-full z-10">
-    <h1 class="mx-4 text-2xl mx-4 font-bold">Verso Digital</h1>
-    <nav class="ml-auto flex space-x-4 mr-4">
-      <a href="sobre.php" class="text-lg font-medium mx-4 hover:underline">Sobre Nós</a>
-      <a href="#" class="text-lg font-medium hover:underline">Home</a>
-    </nav>
-  </header>
+  <?php include "cabecalho.php"; ?>
   <!-- Cabeçalho fixo -->
 
   <!-- Conteúdo Principal -->
@@ -52,7 +46,8 @@ if (!isset($_SESSION['logado'])) {
     <div class="flex space-x-4"> <!-- Robson -->
 
       <!-- Container -->
-      <div class="bg-yellow-200 border border-black w-1/6  py-4 ml-4 mt-20 px-8  shadow shadow-xl"> <!-- Toba -->
+      <div class="bg-yellow-200 border border-black w-1/6 py-4 ml-4 mt-20 mb-8 h-screen fixed px-8  shadow shadow-xl">
+        <!-- Toba -->
 
         <div
           class="bg-yellow-300 border border-black w-26 shadow h-10 text-center my-4 flex items-center justify-center shadow-lg">
@@ -92,7 +87,7 @@ if (!isset($_SESSION['logado'])) {
       </div> <!-- fecha Toba -->
 
 
-      <div class="w-4/5"> <!-- Roberto -->
+      <div class="w-5/6 pl-64 w-full   pr-12"> <!-- Roberto -->
         <div class="flex space-x-4">
 
           <div
@@ -120,7 +115,7 @@ if (!isset($_SESSION['logado'])) {
 
 
         <!-- Começo do Carrossel -->
-        <h2 class="text-xl font-bold mb-4">Explore Destaques</h2>
+        <h2 class="text-xl font-bold mt-8 ml-12">Explore Destaques</h2>
         <div class="flex flex-col items-center p-6">
 
           <div class="relative w-full overflow-hidden">
@@ -211,6 +206,193 @@ if (!isset($_SESSION['logado'])) {
           }
         </script>
 
+
+
+
+        <h2 class="text-xl font-bold mt-8 ml-12">Explore Destaques</h2>
+        <div class="flex flex-col items-center p-6">
+
+          <div class="relative w-full overflow-hidden">
+            <!-- Botão para a Esquerda -->
+            <button
+              class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-gray-300"
+              onclick="scrollCarousel2(-1)">
+              <img src="../img/seta-direita.png" style="transform: scaleX(-1);" alt="">
+            </button>
+
+            <!-- Track do Carousel -->
+            <div id="carousel2" style="scrollbar-width: none;  scroll-behavior: smooth;
+  transition: scroll-right 1.5s ease-in-out "
+              class="flex gap-4 w-full px-4 snap-x scroll-smooth relative w-full overflow-x-auto">
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">STEDZSGoto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">BBBBBBBBB</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">AAAAAAAA</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">UUUUUUUU</p>
+              </div>
+
+              <!-- Repetir os itens conforme necessário -->
+            </div>
+
+            <!-- Botão para a Direita -->
+            <button
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-gray-300"
+              onclick="scrollCarousel2(1)">
+              <img src="../img/seta-direita.png" alt="">
+            </button>
+          </div>
+        </div>
+
+        <script>
+          function scrollCarousel2(direction) {
+            const carousel = document.getElementById('carousel2');
+            const scrollAmount = carousel.offsetWidth;
+            carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+          }
+        </script>
+
+
+
+        <h2 class="text-xl font-bold mt-8 ml-12">Explore Destaques</h2>
+        <div class="flex flex-col items-center p-6">
+
+          <div class="relative w-full overflow-hidden">
+            <!-- Botão para a Esquerda -->
+            <button
+              class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-gray-300"
+              onclick="scrollCarousel3(-1)">
+              <img src="../img/seta-direita.png" style="transform: scaleX(-1);" alt="">
+            </button>
+
+            <!-- Track do Carousel -->
+            <div id="carousel3" style="scrollbar-width: none;  scroll-behavior: smooth;
+  transition: scroll-right 1.5s ease-in-out "
+              class="flex gap-4 w-full px-4 snap-x scroll-smooth relative w-full overflow-x-auto">
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">STEDZSGoto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">BBBBBBBBB</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">AAAAAAAA</p>
+              </div>
+
+              <div class="flex-shrink-0 w-40 snap-center">
+                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">UUUUUUUU</p>
+              </div>
+
+              <!-- Repetir os itens conforme necessário -->
+            </div>
+
+            <!-- Botão para a Direita -->
+            <button
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-gray-300"
+              onclick="scrollCarousel3(1)">
+              <img src="../img/seta-direita.png" alt="">
+            </button>
+          </div>
+        </div>
+
+        <script>
+          function scrollCarousel3(direction) {
+            const carousel = document.getElementById('carousel3');
+            const scrollAmount = carousel.offsetWidth;
+            carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+          }
+        </script>
+
         <!-- Final do Carrossel -->
       </div> <!-- fecha Roberto -->
     </div> <!-- Fecha Robson -->
@@ -219,19 +401,7 @@ if (!isset($_SESSION['logado'])) {
 
 
   <!-- Footer -->
-  <footer class="flex bg-yellow-50 py-4 items-center">
-
-    <div class="mr-auto"></div>
-
-    <div class="mx-auto">
-      <p>&copy; 2024 Verso Digital. Todos os direitos reservados.</p>
-    </div>
-
-    <div class="ml-auto mr-4">
-      <a href="#" class="text-blue-400 hover:underline">?</a>
-    </div>
-
-  </footer>
+  <?php include "footer.php" ?>
   <!-- Fecha Footer -->
 
 
