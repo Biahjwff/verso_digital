@@ -1,15 +1,5 @@
-<?php
-session_start();
-
-// Verifica se o usuário está logado
-if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
-    header('Location: ../index.php?erro=Por favor, faça login primeiro.');
-    exit;
-}
-?>
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -22,7 +12,6 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="darkmode.js"></script>
   <style>
     /* Garante que o carrossel tenha overflow escondido */
     #carousel {
@@ -37,7 +26,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
 </head>
 
-<body style="font-family: 'Happy Monkey' , system-ui;" class="flex flex-col min-h-screen bg-yellow-50">
+<body style="font-family: 'Happy Monkey' , system-ui;" class="flex flex-col min-h-screen bg-yellow-100 dark:bg-gray-500">
 
   <!-- Cabeçalho fixo -->
   <?php include "cabecalho.php"; ?>
@@ -68,12 +57,12 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
         <div
           class="bg-yellow-300 border border-black w-26 shadow h-10 text-center my-8 flex items-center justify-center shadow-lg">
-          <a href="">Contatos</a>
+          <a href="contatos.php">Contatos</a>
         </div>
 
         <div
           class="bg-yellow-300 border border-black w-26 shadow h-10 text-center my-8 flex items-center justify-center shadow-lg">
-          <a href="">Termos</a>
+          <a href="termos.php">Termos</a>
         </div>
 
         <div
@@ -83,7 +72,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
         <div
           class="bg-yellow-300 border border-black w-26 shadow h-10 text-center my-4 flex items-center justify-center shadow-lg">
-          <a href="parcerias.html">Parcerias</a>
+          <a href="parcerias.php">Parcerias</a>
         </div>
 
       </div> <!-- fecha Toba -->
@@ -104,7 +93,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
           <div
             class="w-1/4 bg-yellow-200 w-1/4 h-8 justify-center items-center flex text-center py-4 mt-32 px-8 shadow shadow-xl">
-            <a href="">Mais Acessados</a>
+            <a href="mais_acessados.php">Mais Acessados</a>
           </div>
 
           <div
@@ -134,59 +123,71 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
               class="flex gap-4 w-full px-4 snap-x scroll-smooth relative w-full overflow-x-auto">
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_romance//O Aluno Novo - 06_ Cadê o meu livro__.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Aluno Novo</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">STEDZSGoto</p>
+                <img src="../img/livro_romance/5d30a202-4435-4602-b5b7-ca3a179d052c.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Segredos do Coração</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_romance/30a794ec-8f1d-433d-8d84-ae291e595adc.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Amores Proibidos</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">BBBBBBBBB</p>
+                <img src="../img/livro_romance/Falso Namorado [Concluído] - 07_ Você fica linda de qualquer jeito.jpeg"
+                  alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Falsos Sentimentos</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_romance/fbf10180-9f25-4dd3-a55d-6b8c1d40e57b.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Encontro Inesperado</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_romance/Fora do Controle.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Sem Controle</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_romance/JUST THE THREE OF US your_pretty_anneeeee.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Trio Perfeito</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_romance/livroooo.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Misterioso Amor</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_romance/Silver and Cole - Ruthless Empire.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Império Selvagem</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">AAAAAAAA</p>
+                <img src="../img/livro_romance/Verão Em Dois Tons.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Verão de Mudanças</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">UUUUUUUU</p>
+                <img src="../img/livro_romance/Amore 2.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Aventura Romântica</p>
               </div>
+
 
               <!-- Repetir os itens conforme necessário -->
             </div>
@@ -211,7 +212,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
 
 
-        <h2 class="text-xl font-bold mt-8 ml-12">Explore Destaques</h2>
+        <h2 class="text-xl font-bold mt-8 ml-12">Infantil</h2>
         <div class="flex flex-col items-center p-6">
 
           <div class="relative w-full overflow-hidden">
@@ -228,59 +229,75 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
               class="flex gap-4 w-full px-4 snap-x scroll-smooth relative w-full overflow-x-auto">
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_infantil/3c94a7ae-4dee-40bc-8f24-ce94a489ef26.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">A Aventura do Coelhinho Saltitante</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">STEDZSGoto</p>
+                <img src="../img/livro_infantil/86d8d583-fa48-4617-b86f-a088a902d73b.jpeg" alt="Imagem 2"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Mistério da Floresta Encantada</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_infantil/699786f2-89d5-4fe8-96ea-e59c616d6a06.jpeg" alt="Imagem 3"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Dragão que Queria Amizade</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">BBBBBBBBB</p>
+                <img src="../img/livro_infantil/Autumn Tea Party by Aurélie Lise-Anne.jpeg" alt="Imagem 4"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Chá Mágico das Estações</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img
+                  src="../img/livro_infantil/Charlene Chua, illustration _ Children's illustrator, Canada - Rainy Day Ducks.jpeg"
+                  alt="Imagem 5" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">As Patinhas na Chuva</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img
+                  src="../img/livro_infantil/Elemento Comercial Dinossauro PNG , Clipart De Dinossauro, Dinossauro, Desenho Animado PNG Imagem para download gratuito.jpeg"
+                  alt="Imagem 6" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">A Jornada do Dino Amigo</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_infantil/kids, reza  abbbasi.jpeg" alt="Imagem 7"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">A Festa no Mundo dos Brinquedos</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img
+                  src="../img/livro_infantil/Mavi Kırlangıç Çocuk Dergisi (Kapak Tasarımları) 2019 - Dilek Altıntaş Birben.jpeg"
+                  alt="Imagem 8" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Mundo Mágico das Fadas</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img
+                  src="../img/livro_infantil/O Que Eu Faço Com Esse Grito - Children's Book - Maria Gabriela Gama.jpeg"
+                  alt="Imagem 9" class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Mistério do Grito do Bosque</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">AAAAAAAA</p>
+                <img src="../img/livro_infantil/Premium Vector _ Children lying on the lawn.jpeg" alt="Imagem 10"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Jardim Encantado</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">UUUUUUUU</p>
+                <img src="../img/livro_infantil/The Story Of Bong, Bom, Bach - Wazza Pink.jpeg" alt="Imagem 11"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">A História de Bong e Seus Amigos</p>
               </div>
+
 
               <!-- Repetir os itens conforme necessário -->
             </div>
@@ -304,7 +321,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
 
 
 
-        <h2 class="text-xl font-bold mt-8 ml-12">Explore Destaques</h2>
+        <h2 class="text-xl font-bold mt-8 ml-12">Terror</h2>
         <div class="flex flex-col items-center p-6">
 
           <div class="relative w-full overflow-hidden">
@@ -321,83 +338,92 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
               class="flex gap-4 w-full px-4 snap-x scroll-smooth relative w-full overflow-x-auto">
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_terror/8e9b64ed-380f-4636-83d4-20bfcdb252af.jpeg" alt="Imagem 1"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">A Sombria Maldição</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">STEDZSGoto</p>
+                <img src="../img/livro_terror/9 Livros de Contos de Terror para ler no Halloween 🎃.jpeg" alt="Imagem 2"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Os Contos do Medo</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_terror/0877e6c1-aa25-456a-83c7-9d2f085d2008.jpeg" alt="Imagem 3"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Noites sem Fim</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">BBBBBBBBB</p>
+                <img src="../img/livro_terror/ea389a3f-12b7-4b3e-8843-ed1963d0f4a4.jpeg" alt="Imagem 4"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">A Última Noite</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_terror/Este é o tom de Poemas de Noites Insones, uma….jpeg" alt="Imagem 5"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Poemas para uma Mente Sombria</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_terror/f0549903-d9fd-4eb8-abe1-bb4672c668d7.jpeg" alt="Imagem 6"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center -sm font-medium">O Grito da Sombra</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_terror/Fotos para conto de história de terror _.jpeg" alt="Imagem 7"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Histórias para Sussurrar no Escuro</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_terror/Imagens criadas através da Inteligência Artificial….jpeg" alt="Imagem 8"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">Reflexos da Mente Macabra</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">Sobre Foto</p>
+                <img src="../img/livro_terror/Shane Rebenschied - Illustration Portfolio.jpeg" alt="Imagem 9"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Retorno das Sombras</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">AAAAAAAA</p>
+                <img src="../img/livro_terror/Shane Rebenschied - Illustration Portfolio.jpeg" alt="Imagem 10"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Chamado da Noite</p>
               </div>
 
               <div class="flex-shrink-0 w-40 snap-center">
-                <img src="../img/sobre.png" alt="Imagem 1" class="w-full h-40 object-cover rounded-lg" />
-                <p class="mt-2 text-center text-sm font-medium">UUUUUUUU</p>
+                <img src="../img/livro_terror/zodiaco  - 8.jpeg" alt="Imagem 11"
+                  class="w-full h-40 object-cover rounded-lg" />
+                <p class="mt-2 text-center text-sm font-medium">O Enigma do Zodíaco</p>
               </div>
 
-              <!-- Repetir os itens conforme necessário -->
+
+              <!-- Botão para a Direita -->
+              <button
+                class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-gray-300"
+                onclick="scrollCarousel3(1)">
+                <img src="../img/seta-direita.png" alt="">
+              </button>
             </div>
-
-            <!-- Botão para a Direita -->
-            <button
-              class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-gray-300"
-              onclick="scrollCarousel3(1)">
-              <img src="../img/seta-direita.png" alt="">
-            </button>
           </div>
-        </div>
 
-        <script>
-          function scrollCarousel3(direction) {
-            const carousel = document.getElementById('carousel3');
-            const scrollAmount = carousel.offsetWidth;
-            carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-          }
-        </script>
+          <script>
+            function scrollCarousel3(direction) {
+              const carousel = document.getElementById('carousel3');
+              const scrollAmount = carousel.offsetWidth;
+              carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+          </script>
 
-        <!-- Final do Carrossel -->
-      </div> <!-- fecha Roberto -->
-    </div> <!-- Fecha Robson -->
+          <!-- Final do Carrossel -->
+        </div> <!-- fecha Roberto -->
+      </div> <!-- Fecha Robson -->
 
   </main>
 

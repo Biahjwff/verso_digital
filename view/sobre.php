@@ -1,12 +1,3 @@
-<?php
-    session_start();
-
-    if (!isset($_SESSION['logado'])) {
-        header('Location: ../index.php?erro=Sistema não está logado');
-        exit;
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -21,7 +12,7 @@
  
 </head>
 <body style="font-family: 'Happy Monkey' , system-ui;" 
-      class="bg-[url('../img/sobre.png')]  bg-center bg-no-repeat min-h-screen flex flex-col bg-yellow-50">
+      class="bg-[url('../img/sobre.png')]  bg-center bg-no-repeat min-h-screen flex flex-col bg-yellow-100">
   <!-- Cabeçalho fixo -->
   <?php include "cabecalho.php"; ?>
 

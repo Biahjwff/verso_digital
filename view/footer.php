@@ -7,7 +7,7 @@
 </div>
 
 <div class="ml-auto mr-4">
-  <a href="#" class="text-blue-400 hover:underline">?</a>
+  <a href="help.php" class="text-blacl hover:underline">?</a>
 </div>
 
 </footer>
