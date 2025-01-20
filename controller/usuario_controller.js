@@ -30,7 +30,7 @@ function salvarNovoUsuario() {
 
             alert("Usuario cadastrado com sucesso");
 
-            window.location.href = '../index.php';
+            window.location.href = "../index.php";
         } else {
             alert("Usuário ja cadastrado!");
         } 
@@ -60,5 +60,6 @@ function fazerLogin() {
 
 function logout() {
     localStorage.setItem('logado', 'nao');
+    alert('Usuário não conectado');
     window.location.href = 'view/principal.php';
 }

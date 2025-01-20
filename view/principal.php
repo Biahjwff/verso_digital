@@ -12,6 +12,7 @@
     rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="../controller/verificar.js"></script>
   <style>
     /* Garante que o carrossel tenha overflow escondido */
     #carousel {
@@ -26,7 +27,7 @@
 
 </head>
 
-<body style="font-family: 'Happy Monkey' , system-ui;" class="flex flex-col min-h-screen bg-yellow-100 dark:bg-gray-500">
+<body onload="verificar()" style="font-family: 'Happy Monkey' , system-ui;" class="flex flex-col min-h-screen bg-yellow-100 dark:bg-gray-500">
 
   <!-- Cabeçalho fixo -->
   <?php include "cabecalho.php"; ?>
@@ -67,7 +68,7 @@
 
         <div
           class="bg-yellow-300 border border-black w-26 shadow h-10 text-center my-8 flex items-center justify-center shadow-lg">
-          <a href="../logout">Sair</a>
+          <a href="../logout.php">Sair</a>
         </div>
 
         <div
