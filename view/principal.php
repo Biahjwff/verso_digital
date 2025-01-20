@@ -1,9 +1,10 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['logado'])) {
-  header('Location: ../index.php?erro=Sistema não está logado');
-  exit;
+// Verifica se o usuário está logado
+if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
+    header('Location: ../index.php?erro=Por favor, faça login primeiro.');
+    exit;
 }
 ?>
 
@@ -21,6 +22,7 @@ if (!isset($_SESSION['logado'])) {
     rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="darkmode.js"></script>
   <style>
     /* Garante que o carrossel tenha overflow escondido */
     #carousel {
@@ -46,12 +48,12 @@ if (!isset($_SESSION['logado'])) {
     <div class="flex space-x-4"> <!-- Robson -->
 
       <!-- Container -->
-      <div class="bg-yellow-200 border border-black w-1/6 py-4 ml-4 mt-20 mb-8 h-screen fixed px-8  shadow shadow-xl">
+      <div class="bg-yellow-200 border border-black w-1/6 py-4 ml-4 mt-20 mb-8 h-screen px-8  shadow shadow-xl">
         <!-- Toba -->
 
         <div
           class="bg-yellow-300 border border-black w-26 shadow h-10 text-center my-4 flex items-center justify-center shadow-lg">
-          <a href="">Definições</a>
+          <a href="definicoes.php">Definições</a>
         </div>
 
         <div
@@ -61,7 +63,7 @@ if (!isset($_SESSION['logado'])) {
 
         <div
           class="bg-yellow-300 border border-black w-26 shadow h-10 text-center my-8 flex items-center justify-center shadow-lg">
-          <a href="">Alterar Senha</a>
+          <a href="alterar_senha.php">Alterar Senha</a>
         </div>
 
         <div
@@ -76,7 +78,7 @@ if (!isset($_SESSION['logado'])) {
 
         <div
           class="bg-yellow-300 border border-black w-26 shadow h-10 text-center my-8 flex items-center justify-center shadow-lg">
-          <a href="">Privacidade</a>
+          <a href="../logout">Sair</a>
         </div>
 
         <div
@@ -87,7 +89,7 @@ if (!isset($_SESSION['logado'])) {
       </div> <!-- fecha Toba -->
 
 
-      <div class="w-5/6 pl-64 w-full   pr-12"> <!-- Roberto -->
+      <div class="w-5/6 pl-8 max-w-full   pr-12"> <!-- Roberto -->
         <div class="flex space-x-4">
 
           <div
@@ -107,7 +109,7 @@ if (!isset($_SESSION['logado'])) {
 
           <div
             class="w-1/4 bg-yellow-200 w-1/4 h-8 justify-center items-center flex text-center py-4 mt-32 px-8 shadow shadow-xl">
-            <a href="">Meus Livros</a>
+            <a href="meus_livros.php">Meus Livros</a>
           </div>
 
         </div>
@@ -118,7 +120,7 @@ if (!isset($_SESSION['logado'])) {
         <h2 class="text-xl font-bold mt-8 ml-12">Explore Destaques</h2>
         <div class="flex flex-col items-center p-6">
 
-          <div class="relative w-full overflow-hidden">
+          <div class="relative max-w-full">
             <!-- Botão para a Esquerda -->
             <button
               class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-transparent p-2 rounded-full shadow-md hover:bg-gray-300"

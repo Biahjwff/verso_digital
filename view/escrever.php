@@ -31,17 +31,20 @@
         </header>
 
         <!-- Conteúdo Principal -->
-        <main class="p-8 mt-16">
+        <form method="POST" action="../controller/escrever_controller.php" class="p-8 mt-16">
         <div class="flex space-x-4" >
             <div class="bg-yellow-200 border w-3/5 border-black rounded-lg py-4 ml-4 mt-4 px-8  shadow shadow-xl" >
                 <h1>Criar Nova Obra</h1>
+                <input type="text" name="nome">
+                <input type="file" name="foto">
+                <button type="submit">Publicar</button>
             </div>
 
             <div class="bg-yellow-200 border w-2/5 border-black rounded-lg py-4 ml-4 mt-4 px-8  shadow shadow-xl">
                 <h1>aaaaaaaaaa</h1>
             </div>
         </div>   
-        </main>
+        </fo>
     </div>
 
     <!-- Rodapé -->
